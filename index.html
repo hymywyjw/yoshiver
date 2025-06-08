@@ -251,24 +251,53 @@
         margin-top: 10px;
       }
 
-      @media (max-width: 768px) {
+      /* Tablet & Laptop Kecil (<= 1024px) */
+      @media (max-width: 1024px) {
         .container {
           flex-direction: column;
           align-items: center;
         }
 
         .video-container {
-          width: 90%;
-          max-width: 350px;
-          height: 450px;
+          width: 480px;
+          height: 400px;
         }
 
-        .strip {
+        .strip img {
+          width: 140px;
+          height: 95px;
+        }
+
+        button {
+          width: 80%;
+          max-width: 300px;
+        }
+      }
+
+      /* Smartphone & Phablet (<= 768px) */
+      @media (max-width: 768px) {
+        .video-container {
+          width: 100%;
+          max-width: 400px;
+          height: 300px;
+        }
+
+        .strip img {
+          width: 120px;
+          height: 80px;
+        }
+
+        button {
           width: 90%;
-          max-width: 200px;
-          flex-direction: row;
-          flex-wrap: wrap;
-          justify-content: center;
+        }
+      }
+
+      /* Very Small Screens (<= 480px) */
+      @media (max-width: 480px) {
+        .video-container {
+          width: 100%;
+          max-width: 340px;
+          height: 240px;
         }
 
         .strip img {
@@ -276,22 +305,9 @@
           height: 70px;
         }
 
-        h1 {
-          font-size: 2.5em;
-        }
-
-        .controls {
-          flex-direction: column;
-          gap: 15px;
-        }
-
         button {
-          width: 80%;
-        }
-
-        .options-panel {
-          width: 90%;
-          padding: 15px;
+          font-size: 0.9rem;
+          padding: 8px 16px;
         }
       }
     </style>
